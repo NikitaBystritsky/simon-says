@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+--main-color {
+    color: #FF4646;
+}
+
+:root {
+    color: var(--main-color)
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0 auto;
+    width: 1440px;
+
+}
+
+.header {
+    height: 64px;
+    padding: 0 82px;
+}
+
+.header-wrapper {
+    max-width: 1276px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 12px 0;
+}
+
+.header-logo {
+    display: flex;
+    padding: 8px 20px;
+    width: 141px;
+    height: 40px;
+    align-items: center;
+    flex-direction: row;
+}
+
+.snowflake {
+    text-decoration: none;
+    width: 24px;
+    height: 24px;
+}
+
+.snowflake-text {
+    text-decoration: none;
+}
+
+.header-logo-text {
+    text-align: center;
+}
+
+.header-logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+
+nav {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.nav div {
+    padding: 12px 20px;
+    width: 78px;
+    height: 40px;
+}
+
+.hero-section {
+    border-radius: 20px 20px 0 0;
+    width: 1440px;
+    height: 524px;
+    background-color: #FF4646;
+    background-image: url("/christmas-shop/img/bg-snow.png"), url("/christmas-shop/img/bg-ball.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.hero-section-div {
+    padding: 60px 0px;
+    width: 426px;
+    height: 404px;
+    max-width: 426px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 507px;
+    flex-direction: column;
+    gap: 12px;
+    flex-wrap: nowrap;
+}
+
+.first-action {
+    font-family: "Allura";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    color: white;
+    text-align: center;
+    margin: 0 5px;
+    padding: auto;
+}
+
+.h1-action {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 150%;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 5px;
+    color: white;
+    text-align: center;
+}
+
+.action-button {
+    border-radius: 20px;
+    padding: 20px 32px;
+    width: 235px;
+    height: 56px;
+    background-color: #181C29;
+    color: white;
+    border: none;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0 5px;
+}
