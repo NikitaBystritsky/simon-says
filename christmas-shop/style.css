@@ -124,7 +124,7 @@ nav {
     width: 1440px;
     height: 524px;
     background-color: #FF4646;
-    background-image: url("./christmas-shop/assets/bg-snow.png"), url("./christmas-shop/assets/bg-ball.png");
+    background-image: url("./assets/bg-snow.png"), url("./assets/bg-ball.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -197,7 +197,7 @@ nav {
     width: 1440px;
     height: 648px;
     background-color: #FF4646;
-    background-image: url("./christmas-shop/assets/bg-snow.png");
+    background-image: url("./assets/bg-snow.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -229,7 +229,7 @@ nav {
     border-radius: 20px;
     width: 638px;
     height: 528px;
-    background-image: url("./christmas-shop/assets/santa.svg");
+    background-image: url("./assets/santa.svg");
 }
 
 .left-container-div {
@@ -280,7 +280,7 @@ nav {
     width: 1440px;
     height: 488px;
     background-color: #FF4646;
-    background-image: url("./christmas-shop/assets/bg-snow.png");
+    background-image: url("./assets/bg-snow.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -360,22 +360,22 @@ nav {
 }
 
 .snowman {
-    background-image: url("./christmas-shop/assets/snowman.png");
+    background-image: url("./assets/snowman.png");
     background-size: cover;
 }
 
 .presents {
-    background-image: url("./christmas-shop/assets/christmas-trees.png");
+    background-image: url("./assets/christmas-trees.png");
     background-size: cover;
 }
 
 .christmas-ball {
-    background-image: url("./christmas-shop/assets/christmas-tree-ball.png");
+    background-image: url("./assets/christmas-tree-ball.png");
     background-size: cover;
 }
 
 .house {
-    background-image: url("./christmas-shop/assets/fairytale-house.png");
+    background-image: url("./assets/fairytale-house.png");
     background-size: cover;
 }
 
@@ -396,12 +396,12 @@ nav {
 }
 
 .left-button {
-    background-image: url("./christmas-shop/assets/LeftButton.svg");
+    background-image: url("./assets/LeftButton.svg");
     background-size: cover;
 }
 
 .right-button {
-    background-image: url("./christmas-shop/assets/RightButton.svg");
+    background-image: url("./assets/RightButton.svg");
     background-size: cover;
 }
 
@@ -412,7 +412,7 @@ nav {
     width: 1440px;
     height: 554px;
     background-color: #FF4646;
-    background-image: url("./christmas-shop/assets/bg-snow.png");
+    background-image: url("./assets/bg-snow.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -489,7 +489,7 @@ nav {
 .for-work-img {
     width: 310px;
     height: 230px;
-    background-image: url("./christmas-shop/assets/gift-for-work.png");
+    background-image: url("./assets/gift-for-work.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -529,7 +529,7 @@ nav {
 .for-health-img {
     width: 310px;
     height: 230px;
-    background-image: url("./christmas-shop/assets/gift-for-health.png");
+    background-image: url("./assets/gift-for-health.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -551,7 +551,7 @@ nav {
 .for-harmony-img {
     width: 310px;
     height: 230px;
-    background-image: url("./christmas-shop/assets/gift-for-harmony.png");
+    background-image: url("./assets/gift-for-harmony.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -578,7 +578,7 @@ nav {
     width: 1440px;
     height: 668px;
     background-color: #FF4646;
-    background-image: url("./christmas-shop/assets/bg-forest.png"), url("./christmas-shop/assets/bg-snow.png");
+    background-image: url("./assets/bg-forest.png"), url("./assets/bg-snow.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -808,7 +808,7 @@ hr {
     height: 1394px;
     border-radius: 20px;
     background-color: #FF4646;
-    background-image: url("./christmas-shop/assetsbg-garland.png");
+    background-image: url("./assetsbg-garland.png");
     background-repeat: no-repeat;
     background-size: contain;
     display: flex;
