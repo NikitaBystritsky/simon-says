@@ -10,6 +10,7 @@
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -186,6 +187,7 @@ nav {
     letter-spacing: 0.04em;
     text-transform: uppercase;
     margin: 0 5px;
+    cursor: pointer;
 }
 
 /* HERO SECTION CLASSES END */
@@ -477,7 +479,11 @@ nav {
     display: flex;
     flex-direction: column;
     background-color: #ECF3F8;
+    cursor: pointer;
+}
 
+.card:hover{
+    color: #FF4646;
 }
 
 .for-work-img {
@@ -889,4 +895,18 @@ hr {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+}
+
+.contacts-link, .gifts-link, .about-link, .best-link, .call, .mail, .map, .rs-school{
+    text-decoration: none;
+    color: #181C29;
+    display: inline-block;
+}
+
+.footer-action:hover{
+    color: #FF4646;
+}
+
+.footer-h3:hover{
+    color: #FF4646;
 }

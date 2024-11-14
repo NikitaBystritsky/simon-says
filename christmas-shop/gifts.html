@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gifts</title>
+    <link rel="icon" type="image/svg+xml" href="/christmas-shop/img/snowflake.svg">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,30 +20,30 @@
     <header>
         <div class="header-wrapper">
             <div class="header-logo">
-                <a href="#" class="snowflake">
+                <a href="home.html" class="snowflake">
                     <img src="/christmas-shop/img/snowflake.svg" alt="snowflake" class="snowflake-img">
                 </a>
-                <a href="#" class="snowflake-text">
+                <a href="home.html" class="snowflake-text">
                     <pre class="header-logo-text">THE GIFTS</pre>
                 </a>
             </div>
             <nav>
                 <div class="nav-gifts-gifts">
-                    <p>GIFTS</p>
+                    <a class="gifts-link" href="#gifts"><p>GIFTS</p></a>
                 </div>
                 <div class="nav-about">
-                    <p>ABOUT</p>
+                    <a class="about-link" href="home.html#about"><p>ABOUT</p></a>
                 </div>
                 <div class="nav-best">
-                    <p>BEST</p>
+                    <a class="best-link" href="home.html#best"><p>BEST</p></a>
                 </div>
                 <div class="nav-contacts">
-                    <p>CONTACTS</p>
+                    <a class="contacts-link" href="#footer"><p>CONTACTS</p></a>
                 </div>
             </nav>
         </div>
     </header>
-    <section class="gifts-section">
+    <section class="gifts-section" id="gifts">
         <div class="gifts-div">
             <div class="gifts-page-caption">
                 <h1 class="gifts-page-h1">Achieve health, harmony, and inner strength</h1>
@@ -149,24 +150,30 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="footer-div">
             <div class="footer-cards">
-                <div class="footer-card">
-                    <img src="/christmas-shop/img/santa-claus.svg" alt="small santa">
-                    <p class="footer-action">+375 (29) 111-22-33</p>
-                    <p class="footer-h3">Call us</p>
-                </div>
-                <div class="footer-card">
-                    <img src="/christmas-shop/img/christmas-tree.svg" alt="x-mas-tree">
-                    <p class="footer-action">Magic forest</p>
-                    <p class="footer-h3">meet us</p>
-                </div>
-                <div class="footer-card">
-                    <img src="/christmas-shop/img/snake.svg" alt="small snake">
-                    <p class="footer-action">gifts@magic.com</p>
-                    <p class="footer-h3">write us</p>
-                </div>
+                <a class="call" href="tel+375 (29) 111-22-33">
+                    <div class="footer-card">
+                        <img src="/christmas-shop/img/santa-claus.svg" alt="small santa">
+                        <p class="footer-action">+375 (29) 111-22-33</p>
+                        <p class="footer-h3">Call us</p>
+                    </div>
+                </a>
+                <a class="map" href="https://www.google.si/maps/place/Приёмное+отделение+психиатрической+больницы+№+1+им.+П.+П.+Кащенко/@59.91622,30.3008352,17z/data=!3m1!4b1!4m6!3m5!1s0x46962fa100000001:0xbb1d6411ffa623e6!8m2!3d59.91622!4d30.3034101!16s%2Fg%2F11fylptzf0?entry=ttu&g_ep=EgoyMDI0MTExMi4wIKXMDSoASAFQAw%3D%3D">
+                    <div class="footer-card">
+                        <img src="/christmas-shop/img/christmas-tree.svg" alt="x-mas-tree">
+                        <p class="footer-action">Magic forest</p>
+                        <p class="footer-h3">meet us</p>
+                    </div>
+                </a>
+                <a class="mail" href="mailto:gifts@magic.com">
+                    <div class="footer-card">
+                        <img src="/christmas-shop/img/snake.svg" alt="small snake">
+                        <p class="footer-action">gifts@magic.com</p>
+                        <p class="footer-h3">write us</p>
+                    </div>
+                </a>
             </div>
             <div class="contacts">
                 <div class="socials">
@@ -183,7 +190,7 @@
                         <img src="/christmas-shop/img/X.svg" alt="X">
                     </div>
                 </div>
-                <p class="rights">© Copyright 2025, All Rights Reserved</p>
+                <a class="rs-school" href="https://rs.school/"><p class="rights">© Copyright 2025, All Rights Reserved</p></a>
                 <p class="made-in">Made in Rolling Scopes School</p>
             </div>
         </div>
