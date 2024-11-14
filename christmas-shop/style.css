@@ -124,7 +124,7 @@ nav {
     width: 1440px;
     height: 524px;
     background-color: #FF4646;
-    background-image: url("/christmas-shop/img/bg-snow.png"), url("/christmas-shop/img/bg-ball.png");
+    background-image: url("./christmas-shop/img/bg-snow.png"), url("./christmas-shop/img/bg-ball.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -197,7 +197,7 @@ nav {
     width: 1440px;
     height: 648px;
     background-color: #FF4646;
-    background-image: url(/christmas-shop/img/bg-snow.png);
+    background-image: url("./christmas-shop/img/bg-snow.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -229,7 +229,7 @@ nav {
     border-radius: 20px;
     width: 638px;
     height: 528px;
-    background-image: url(/christmas-shop/img/santa.svg);
+    background-image: url("./christmas-shop/img/santa.svg");
 }
 
 .left-container-div {
@@ -280,7 +280,7 @@ nav {
     width: 1440px;
     height: 488px;
     background-color: #FF4646;
-    background-image: url(/christmas-shop/img/bg-snow.png);
+    background-image: url("./christmas-shop/img/bg-snow.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -360,22 +360,22 @@ nav {
 }
 
 .snowman {
-    background-image: url(/christmas-shop/img/snowman.png);
+    background-image: url("./christmas-shop/img/snowman.png");
     background-size: cover;
 }
 
 .presents {
-    background-image: url(/christmas-shop/img/christmas-trees.png);
+    background-image: url("./christmas-shop/img/christmas-trees.png");
     background-size: cover;
 }
 
 .christmas-ball {
-    background-image: url(/christmas-shop/img/christmas-tree-ball.png);
+    background-image: url("./christmas-shop/img/christmas-tree-ball.png");
     background-size: cover;
 }
 
 .house {
-    background-image: url(/christmas-shop/img/fairytale-house.png);
+    background-image: url("./christmas-shop/img/fairytale-house.png");
     background-size: cover;
 }
 
@@ -396,7 +396,7 @@ nav {
 }
 
 .left-button {
-    background-image: url(/christmas-shop/img/LeftButton.svg);
+    background-image: url("./christmas-shop/img/LeftButton.svg");
     background-size: cover;
 }
 
