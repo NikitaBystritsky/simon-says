@@ -54,6 +54,7 @@ body {
     align-items: center;
     flex-direction: row;
     gap: 8px;
+    position: relative;
 }
 
 .snowflake {
@@ -401,8 +402,19 @@ nav {
 }
 
 .right-button {
+    width: 56px;
+    height: 56px;
+    border-radius: 20px;
     background-image: url("./assets/RightButton.svg");
     background-size: cover;
+    padding: 16px;
+}
+
+.right-arrow{
+    background-image: url("./assets/arrow-right.svg");
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
 }
 
 /* SLIDER SECTION CLASSES END */
@@ -484,6 +496,7 @@ nav {
 
 .card:hover{
     color: #FF4646;
+    transition: 0.5s;
 }
 
 .for-work-img {
@@ -905,8 +918,88 @@ hr {
 
 .footer-action:hover{
     color: #FF4646;
+    transition: 0.5s;
+
 }
 
 .footer-h3:hover{
     color: #FF4646;
+    transition: 0.5s;
+}
+
+.action-button:hover{
+    background-color: #ffffff;
+    color: #181C29;
+    transition: 0.5s;
+}
+
+#no-hover:hover{
+    cursor:default;
+}
+
+#no-hover{
+    text-decoration: none;
+    color: #FF4646;
+}
+
+.header-span{
+    position:absolute; 
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    padding: 8px 20px;
+    z-index: 1;
+}
+
+.made-in:hover{
+    color: #FF4646;
+    transition: 0.5s;
+}
+
+.nav-about:hover, .nav-best:hover, .nav-contacts:hover, .nav-gifts:hover{
+    background-color: rgba(255, 70, 70, 0.1);
+    border-radius: 12px;
+    transition: 0.5s;
+}
+
+.nav-about:hover .hover-header{
+    color: #FF4646;
+    transition: 0.5s;
+}
+
+.nav-best:hover .hover-header{
+    color: #FF4646;
+    transition: 0.5s;
+}
+
+.nav-contacts:hover .hover-header{
+    color: #FF4646;
+    transition: 0.5s;
+}
+
+.nav-gifts:hover .hover-header{
+    color: #FF4646;
+    transition: 0.5s;
+}
+
+.for-work-tab:hover{
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.for-health-tab:hover{
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.for-harmony-tab:hover{
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.5s;
+    cursor: pointer;
 }
