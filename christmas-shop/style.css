@@ -1135,5 +1135,18 @@ hr {
         margin: 0;
     }
 
+    .nav-gifts-gifts{
+        display: none;
+    }
 
+    .gifts-section{
+        width: 768px;
+        height: 2456px;
+    }
+
+    .gifts-page-container{
+        width: 752px;
+        height: 2112px;
+        justify-content: center;
+    }
 }
