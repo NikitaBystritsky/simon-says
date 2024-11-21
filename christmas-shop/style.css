@@ -1135,6 +1135,7 @@ hr {
     .burger-line{
         width: 22px;
         height: 1px;
+        color: #181C29;
         border: 1px solid #181C29;
         margin: 0;
     }
@@ -1156,6 +1157,7 @@ hr {
 }
 
 @media screen and (max-width: 380px){
+
     html{
         width: 380px;
         overflow-x: hidden;
@@ -1320,13 +1322,72 @@ hr {
     }
 
     .gifts-section{
-        width: 768px;
-        height: 2456px;
+        width: 380px;
+        height: 4676px;
+    }
+
+    .gifts-div{
+        width: 380px;
     }
 
     .gifts-page-container{
-        width: 752px;
-        height: 2112px;
+        width: 364px;
+        height: 4556px;
         justify-content: center;
+    }
+
+    .gifts-page-tabs{
+        width: 354px;
+        gap: 0;
+    }
+
+    .all-tab{
+        width: 41px;
+    }
+
+    .for-work-tab{
+        width: 92px;
+    }
+
+    .for-health-tab{
+        width: 102px;
+    }
+
+    .for-harmony-tab{
+        width: 119px;
+    }
+
+    .gifts-page-caption{
+        width: 364px;
+        height: 240px;
+    }
+
+    .made-in:hover{
+        color: #181C29;
+        transition: none;
+    }
+
+    .action-button:hover{
+        background-color: #181C29;
+        color: #ffffff;
+        transition: none;
+    }
+
+    .for-work-tab:hover{
+        border-radius: 0;
+        background-color: #FF4646;
+        transition: none;
+    }
+
+    .for-health-tab:hover{
+        border-radius: 0;
+        background-color: #FF4646;
+        transition: none;
+    }
+
+    .for-harmony-tab:hover{
+        border-radius: 0;
+        background-color: #FF4646;
+        transition: none;
     }
 }
