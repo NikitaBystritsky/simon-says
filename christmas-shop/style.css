@@ -200,6 +200,10 @@ nav {
     cursor: pointer;
 }
 
+.mobile-br{
+    display: none;
+}
+
 /* HERO SECTION CLASSES END */
 
 /* ABOUT SECTION CLASSES START */
@@ -1111,6 +1115,182 @@ hr {
 
     .footer-card{
         width: 752px;
+    }
+
+    .nav-gifts, .nav-about, .nav-best, .nav-contacts{
+        display: none;
+    }
+
+    .burger{
+        display: flex;
+        width: 40px;
+        height: 40px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        margin: 0;
+        gap: 8px;
+    }
+
+    .burger-line{
+        width: 22px;
+        height: 1px;
+        border: 1px solid #181C29;
+        margin: 0;
+    }
+
+    .nav-gifts-gifts{
+        display: none;
+    }
+
+    .gifts-section{
+        width: 768px;
+        height: 2456px;
+    }
+
+    .gifts-page-container{
+        width: 752px;
+        height: 2112px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 380px){
+    html{
+        width: 380px;
+        overflow-x: hidden;
+    }
+
+    body{
+        width: 100%;
+    }
+
+    .header-wrapper{
+        width: 380px;
+    }
+
+    .hero-section{
+        width: 380px;
+        height: 572px;
+    }
+
+    .hero-section-div{
+        margin: 0 8px;
+        width: 364px;
+        height: 452px;
+    }
+
+    .mobile-br{
+        display: block;
+    }
+
+    .about-section{
+        width: 380px;
+        height: 1000px;
+    }
+
+    .about-section-div{
+        width: 364px;
+        height: 880px;
+        flex-direction: column;
+    }
+
+    .left-container{
+        width: 364px;
+        height: 352px;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+
+    .image-container{
+        background-position: center;
+        height: 528px;
+        width: 364px;
+    }
+
+    .left-container-div{
+        width: 324px;
+        height: 352px;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .slider-section{
+        width: 380px;
+        justify-content: left;
+        padding-left: 8px;
+    }
+
+    .slider-section-div{
+        width: 380px;
+    }
+
+    .slider-text{
+        width: 364px;
+        padding-right: 8px;
+    }
+
+    .slider-buttons{
+        width: 364px;
+    }
+
+    .slider-text{
+        justify-self: center;
+    }
+
+    .best-gifts-section{
+        width: 380px;
+        height: 1616px;
+    }
+
+    .best-gifts-div{
+        width: 364px;
+        height: 1496px;
+    }
+
+    .cards-container{
+        width: 364px;
+        height: 1404px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 0 27px;
+    }
+
+    .cta-section{
+        width: 380px;
+        height: 704px;
+    }
+
+    .cta-section-div{
+        width: 364px;
+        height: 584px;
+    }
+
+    .footer{
+        width: 380px;
+        height: 928px;
+    }
+
+    .footer-div{
+        width: 364px;
+        height: 808px;
+    }
+
+    .footer-cards{
+        width: 364px;
+        flex-direction: column;
+    }
+
+    .footer-card{
+        width: 364px;
+    }
+
+    .contacts{
+        height: 112px;
+        width: 364px;
     }
 
     .nav-gifts, .nav-about, .nav-best, .nav-contacts{
