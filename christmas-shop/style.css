@@ -1154,6 +1154,51 @@ hr {
         height: 2112px;
         justify-content: center;
     }
+
+    .made-in:hover{
+        color: #181C29;
+        transition: none;
+    }
+
+    .action-button:hover{
+        background-color: #181C29;
+        color: #ffffff;
+        transition: none;
+    }
+
+    .for-work-tab:hover{
+        border-radius: 0;
+        background-color: #FF4646;
+        transition: none;
+    }
+
+    .for-health-tab:hover{
+        border-radius: 0;
+        background-color: #FF4646;
+        transition: none;
+    }
+
+    .for-harmony-tab:hover{
+        border-radius: 0;
+        background-color: #FF4646;
+        transition: none;
+    }
+
+    .card:hover{
+        color:#181C29;
+        transition: none;
+    }
+
+    .footer-action:hover{
+        color:#181C29;
+        transition: none;
+    
+    }
+    
+    .footer-h3:hover{
+        color:#181C29;
+        transition: none;
+    }
 }
 
 @media screen and (max-width: 380px){
@@ -1388,6 +1433,22 @@ hr {
     .for-harmony-tab:hover{
         border-radius: 0;
         background-color: #FF4646;
+        transition: none;
+    }
+
+    .card:hover{
+        color:#181C29;
+        transition: none;
+    }
+
+    .footer-action:hover{
+        color:#181C29;
+        transition: none;
+    
+    }
+    
+    .footer-h3:hover{
+        color:#181C29;
         transition: none;
     }
 }
