@@ -1452,3 +1452,30 @@ hr {
         transition: none;
     }
 }
+
+.up-button{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .up-button{
+        display: block;
+        border-radius: 100px;
+        width: 56px;
+        height: 56px;
+        background-color: #ffffff;
+        position: fixed;
+        right: 8px;
+        bottom: 8px;
+        cursor: pointer;
+        border-color:#FF4646;
+        background-image: url(/assets/arrow-up.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        border-style: solid;
+    }
+    
+    .no-button{
+        display: none;
+    }
+}
