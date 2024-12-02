@@ -831,7 +831,7 @@ hr {
 
 .gifts-section {
     width: 1440px;
-    height: 1394px;
+    height: 3494px;
     border-radius: 20px;
     background-color: #FF4646;
     background-image: url("./assets/bg-garland.png");
@@ -845,7 +845,7 @@ hr {
 
 .gifts-div {
     width: 1276px;
-    height: 1274px;
+    height: 3374px;
     max-width: 1276px;
     display: flex;
     justify-content: center;
@@ -917,7 +917,7 @@ hr {
 
 .gifts-page-container {
     width: 1276px;
-    height: 1050px;
+    height: 3150px;
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
@@ -963,6 +963,10 @@ hr {
     left: 0;
     padding: 8px 20px;
     z-index: 1;
+}
+
+.no-button{
+    display: none;
 }
 
 .made-in:hover{
@@ -1224,12 +1228,12 @@ hr {
 
     .gifts-section{
         width: 768px;
-        height: 2456px;
+        height: 6704px;
     }
 
     .gifts-page-container{
         width: 752px;
-        height: 2112px;
+        height: 6360px;
         justify-content: center;
     }
 
@@ -1428,7 +1432,7 @@ hr {
 
     .gifts-section{
         width: 380px;
-        height: 4676px;
+        height: 13172px;
     }
 
     .gifts-div{
@@ -1437,7 +1441,7 @@ hr {
 
     .gifts-page-container{
         width: 364px;
-        height: 4556px;
+        height: 12732px;
         justify-content: center;
     }
 
@@ -1627,7 +1631,7 @@ hr {
         bottom: 8px;
         cursor: pointer;
         border-color:#FF4646;
-        background-image: url(/assets/arrow-up.svg);
+        background-image: url("/assets/arrow-up.svg");
         background-position: center;
         background-repeat: no-repeat;
         border-style: solid;
@@ -1636,4 +1640,51 @@ hr {
     .no-button{
         display: none;
     }
+}
+
+.one-tab-section{
+    width: 1440px;
+    height: 1394px;
+    border-radius: 20px;
+    background-color: #FF4646;
+    background-image: url("./assets/bg-garland.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.all-tab-none-active{
+    border-radius: 12px;
+    width: 65px;
+    height: 40px;
+}
+
+.for-work-tab-active{
+    border-radius: 12px;
+    width: 116px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.for-harmony-tab-active{
+    border-radius: 12px;
+    width: 116px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.for-health-tab-active{
+    border-radius: 12px;
+    width: 116px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.burger-gifts{
+    background-color: rgba(255, 70, 70, 0.1);
+    color: #FF4646;
+    border-radius: 12px;
 }
