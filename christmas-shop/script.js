@@ -1,25 +1,45 @@
-const button_up = document.querySelector('.up-button');
 
-var rootElement = document.documentElement;
+const burgerButton = document.querySelector('.burger');
+let firstBar = document.querySelector('.burger-line');
+let secondBar = document.querySelector('.burger-lin');
+let mobileNav = document.querySelector('.mobile-nav');
+let body = document.querySelector('body')
+let navAbout = document.querySelector('.burger-about')
+let navBest = document.querySelector('.burger-best')
+let navContacts = document.querySelector('.burger-contacts')
+let navGifts = document.querySelector('.burger-gifts')
 
-function scrollToTop() {
-  rootElement.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-}
+burgerButton.addEventListener('click', function () {
+  firstBar.classList.toggle('first');
+  secondBar.classList.toggle('second');
+  mobileNav.classList.toggle('is-active');
+  body.classList.toggle('no-body-scroll');
+});
 
-button_up.addEventListener("click", scrollToTop);
+navAbout.addEventListener('click', function () {
+  firstBar.classList.toggle('first');
+  secondBar.classList.toggle('second');
+  mobileNav.classList.toggle('is-active');
+  body.classList.toggle('no-body-scroll');
+});
 
-    document.addEventListener('scroll', function () {
-        if (window.scrollY > 300) {
-            button_up.classList.remove('no-button');
-            button_up.classList.add('up-button');
-        } else {
-            button_up.classList.remove('up-button');
-            button_up.classList.add('no-button');
-        }
-    }
-    );
+navBest.addEventListener('click', function () {
+  firstBar.classList.toggle('first');
+  secondBar.classList.toggle('second');
+  mobileNav.classList.toggle('is-active');
+  body.classList.toggle('no-body-scroll');
+});
 
+navContacts.addEventListener('click', function () {
+  firstBar.classList.toggle('first');
+  secondBar.classList.toggle('second');
+  mobileNav.classList.toggle('is-active');
+  body.classList.toggle('no-body-scroll');
+});
 
+navGifts.addEventListener('click', function () {
+  firstBar.classList.toggle('first');
+  secondBar.classList.toggle('second');
+  mobileNav.classList.toggle('is-active');
+  body.classList.toggle('no-body-scroll');
+});
