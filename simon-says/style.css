@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    justify-content: center;
+    padding-top: 45px;
+}
+
+.main-container{
+    width: 800px;
+    height: 800px;
+    background-color: gray;
+    border-radius: 20px;
+    border-color: black;
+    border: solid;
+}
