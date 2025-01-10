@@ -50,3 +50,36 @@ body{
     position: absolute;
     right: 0;
 }
+
+.display{
+    width: 500px;
+    height: 100px;
+    font-size: 60px;
+    color: aqua;
+    text-align: center;
+    margin: auto;
+    margin-top: 70px;
+}
+.numbers{
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.key{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.letters{
+    margin: auto;
+    margin-top: 8px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}

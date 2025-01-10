@@ -36,3 +36,36 @@ const newGameButton = document.createElement('button');
 newGameButton.classList.add('new-game-btn');
 newGameButton.textContent = 'new game';
 mainContainer.appendChild(newGameButton);
+
+//sequence container
+const sequenceDisplay = document.createElement('div');
+sequenceDisplay.textContent = 'AAAAAAAAAA';
+sequenceDisplay.classList.add('display');
+mainContainer.appendChild(sequenceDisplay);
+
+//numbers
+const keyboardNumbers = document.createElement('div');
+keyboardNumbers.classList.add('numbers');
+mainContainer.appendChild(keyboardNumbers);
+
+const keyboardKeysNumbers = '1234567890'.split('');
+keyboardKeysNumbers.forEach(key => {
+  const button = document.createElement('button');
+  button.classList.add('key')
+  button.textContent = key;
+  keyboardNumbers.appendChild(button);
+});
+
+//letters
+
+const keyboardLetters = document.createElement('div');
+keyboardLetters.classList.add('letters');
+mainContainer.appendChild(keyboardLetters);
+
+const keyboardKeysLetters = 'QWERTYUIOPASDFGHJKLZXCVBNM'.split('');
+keyboardKeysLetters.forEach(key => {
+  const button = document.createElement('button');
+  button.classList.add('key')
+  button.textContent = key;
+  keyboardLetters.appendChild(button);
+});
