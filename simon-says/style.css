@@ -11,12 +11,13 @@ body{
     border-radius: 20px;
     border-color: black;
     border: solid;
+    position: relative;
 }
 
 .level-container{
     width: 200px;
     height: 25px;
-    margin: 5px;
+    margin: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,5 +27,26 @@ body{
 .new-game-btn{
     width: 162px;
     height: 20px;
-    margin-left: 23px;
+    margin: 25px;
+    margin-left: 32px;
+}
+
+.rounds{
+    width: 162px;
+    height: 20px;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    top: 0;
+    margin: 25px;
+    color: aliceblue;
+}
+
+.repeat-btn{
+    width: 162px;
+    height: 20px;
+    margin: 25px;
+    margin-left: 32px;
+    position: absolute;
+    right: 0;
 }
