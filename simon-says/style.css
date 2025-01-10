@@ -12,3 +12,19 @@ body{
     border-color: black;
     border: solid;
 }
+
+.level-container{
+    width: 200px;
+    height: 25px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.new-game-btn{
+    width: 162px;
+    height: 20px;
+    margin-left: 23px;
+}
