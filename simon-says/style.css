@@ -83,3 +83,20 @@ body{
     flex-wrap: wrap;
     align-items: center;
 }
+
+.start{
+    width: 400px;
+    height: 100px;
+    margin-top: 40px;
+    font-size: 40px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+}
+
+.none{
+    display: none;
+}

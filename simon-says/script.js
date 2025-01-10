@@ -21,7 +21,7 @@ const levels = ['easy', 'medium', 'hard'];
 levels.forEach(level => {
     const button = document.createElement('button');
     button.textContent = level;
-    button.onclick = () => startGame(level);
+    button.onclick = () => whichLevel(level);
   levelContainer.appendChild(button);
 });
 
@@ -69,3 +69,26 @@ keyboardKeysLetters.forEach(key => {
   button.textContent = key;
   keyboardLetters.appendChild(button);
 });
+
+//start button
+const startButton = document.createElement('button');
+startButton.classList.add('start');
+startButton.textContent = 'START';
+mainContainer.appendChild(startButton);
+
+//which level
+
+function whichLevel(level){
+    if (level === 'easy') {
+        keyboardLetters.classList.add('none');
+        keyboardNumbers.classList.remove('none')
+    }
+    else if(level === 'medium'){
+        keyboardLetters.classList.remove('none');
+        keyboardNumbers.classList.add('none')
+    }
+    else{
+        keyboardLetters.classList.remove('none');
+        keyboardNumbers.classList.remove('none')
+    }
+}
