@@ -52,6 +52,7 @@ const repeatSequence = document.createElement("button");
 repeatSequence.classList.add("repeat-btn");
 repeatSequence.textContent = "repeat sequence";
 repeatSequence.disabled = true;
+repeatSequence.onclick = () => repeat();
 mainContainer.appendChild(repeatSequence);
 
 //new game button
@@ -120,7 +121,7 @@ const closePopupButton = document.createElement('button');
 closePopupButton.textContent = '×';
 closePopupButton.classList.add('popuip-btn');
 closePopupButton.onclick = () => {
-  popupContainer.classList.add('none')
+  popupContainer.style.display = 'none';
 };
 
 popupMessage.appendChild(closePopupButton);
@@ -293,4 +294,13 @@ function handleInput(input) {
   }
   highlightKey(input);
   setTimeout(() => unhighlightKey(input), 200);
+}
+
+function repeat() {
+  if (!canRepeat) return;
+  canRepeat = false;
+  displaySequence();
+  repeatSequence.disabled = true;
+  sequenceDisplay.textContent = '';
+  playerInput = [];
 }
