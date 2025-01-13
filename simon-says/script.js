@@ -59,6 +59,7 @@ mainContainer.appendChild(repeatSequence);
 const newGameButton = document.createElement("button");
 newGameButton.classList.add("new-game-btn");
 newGameButton.textContent = "new game";
+newGameButton.onclick = () => resetGame();
 mainContainer.appendChild(newGameButton);
 newGameButton.disabled = true;
 
@@ -303,4 +304,27 @@ function repeat() {
   repeatSequence.disabled = true;
   sequenceDisplay.textContent = '';
   playerInput = [];
+}
+
+function resetGame() {
+  sequence = [];
+  playerInput = [];
+  round = 0;
+  attemptsLeft = 2;
+  inputEnabled = false;
+  lockLetters();
+  lockNumbers();
+  updateRoundDisplay();
+  repeatSequence.textContent = "repeat sequence";
+  sequenceDisplay.textContent = "";
+  rounds.textContent = 'Round: 0/5';
+  repeatSequence.disabled = true;
+  newGameButton.disabled = true;
+  startButton.classList.remove('none');
+  unlockLevel(currentLevel);
+  roundDisplay.textContent = `Round: ${round}/5`;
+  Object.keys(keyButtons).forEach(key => {
+    unhighlightKey(key);
+  });
+  popupContainer.style.display = 'none';
 }
