@@ -78,6 +78,8 @@ keyboardKeysNumbers.forEach((key) => {
   const button = document.createElement("button");
   button.classList.add("key");
   button.textContent = key;
+  button.onclick = () => handleInput(key);
+  numberButtons[key] = button;
   keyboardNumbers.appendChild(button);
 });
 
@@ -93,6 +95,8 @@ keyboardKeysLetters.forEach((key) => {
   const button = document.createElement("button");
   button.classList.add("key");
   button.textContent = key;
+  button.onclick = () => handleInput(key);
+  letterButtons[key] = button;
   keyboardLetters.appendChild(button);
 });
 
@@ -140,39 +144,41 @@ currentLevel = 'hard';
 
 
 function startRound() {
-playerInput = [];
-sequenceDisplay.textContent = '';
-lockNumbers();
-lockLetters();
-startButton.classList.add('none');
-  if (round >= 5) {
-    showPopup('Game over! You completed all 5 rounds.');
-    return;
+  playerInput = [];
+  sequenceDisplay.textContent = '';
+  lockNumbers();
+  lockLetters();
+  startButton.classList.add('none');
+    if (round >= 5) {
+      showPopup('Game over! You completed all 5 rounds.');
+      resetGame();
+      return;
+    }
+    newGameButton.disabled = false;
+    repeatSequence.textContent = "repeat sequence";
+    round++;
+    updateRoundDisplay();
+    const chars =
+      currentLevel === "easy"
+        ? "1234567890"
+        : currentLevel === "medium"
+        ? "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        : "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const newSequence = [];
+    for (let i = 0; i < round * 2; i++) {
+      newSequence.push(chars[Math.floor(Math.random() * chars.length)]);
+      setTimeout(() => {
+        unlockNumbers();
+        unlockLetters();}, 1250 * (round * 2))
+    }
+    sequence = [...newSequence];
+  
+    repeatSequence.disabled = false;
+    canRepeat = true;
+    inputEnabled = false;
+    displaySequence();
+    disableLevel(currentLevel);
   }
-  newGameButton.disabled = false;
-  repeatSequence.textContent = "repeat sequence";
-  round++;
-  updateRoundDisplay();
-  const chars =
-    currentLevel === "easy"
-      ? "1234567890"
-      : currentLevel === "medium"
-      ? "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-      : "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const newSequence = [];
-  for (let i = 0; i < round * 2; i++) {
-    newSequence.push(chars[Math.floor(Math.random() * chars.length)]);
-    setTimeout(() => {
-      unlockNumbers();
-      unlockLetters();}, 1250 * (round * 2))
-  }
-  sequence = [...newSequence];
-
-  repeatSequence.disabled = false;
-  canRepeat = true;
-  inputEnabled = false;
-  disableLevel(currentLevel);
-}
 
 function disableLevel(level) {
   currentLevel = level;
@@ -218,4 +224,73 @@ function unlockNumbers(){
 
 function updateRoundDisplay() {
   rounds.textContent = `Round: ${round}/5`;
+}
+
+function displaySequence() {
+  let index = 0;
+
+  const interval = setInterval(() => {
+    if (index >= sequence.length) {
+      clearInterval(interval);
+      inputEnabled = true;
+      return;
+    }
+
+    const char = sequence[index];
+    highlightKey(char);
+
+    setTimeout(() => {
+      unhighlightKey(char);
+    }, 500);
+
+    index++;
+  }, 1000);
+}
+
+function highlightKey(key) {
+  if (numberButtons[key]) {
+    numberButtons[key].style.backgroundColor = "yellow";
+  } else if (letterButtons[key]) {
+    letterButtons[key].style.backgroundColor = "yellow";
+  }
+}
+
+function unhighlightKey(key) {
+  if (numberButtons[key]) {
+    numberButtons[key].style.backgroundColor = "";
+  } else if (letterButtons[key]) {
+    letterButtons[key].style.backgroundColor = "";
+  }
+}
+
+function handleInput(input) {
+  if (!sequence.length || !inputEnabled) return;
+
+  playerInput.push(input);
+  sequenceDisplay.textContent = playerInput;
+
+  if (
+    playerInput[playerInput.length - 1] !== sequence[playerInput.length - 1]
+  ) {
+    attemptsLeft--;
+    if (attemptsLeft > 0) {
+      showPopup('Wrong input! Try again.');
+      playerInput = [];
+      return;
+    }
+    showPopup('Wrong input! Game over.');
+    resetGame();
+    return;
+  }
+
+  if (playerInput.length === sequence.length) {
+    inputEnabled = false;
+    repeatSequence.textContent = "next";
+    repeatSequence.disabled = false;
+    lockLetters();
+    lockNumbers();
+    startRound();
+  }
+  highlightKey(input);
+  setTimeout(() => unhighlightKey(input), 200);
 }
