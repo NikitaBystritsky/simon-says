@@ -7,7 +7,7 @@ body{
 .main-container{
     width: 800px;
     height: 800px;
-    background-color: gray;
+    background-color: rgb(60, 238, 223);
     border-radius: 20px;
     border-color: black;
     border: solid;
@@ -39,7 +39,7 @@ body{
     right: 0;
     top: 0;
     margin: 25px;
-    color: aliceblue;
+    color: rgb(0, 0, 0);
 }
 
 .repeat-btn{
@@ -55,7 +55,7 @@ body{
     width: 500px;
     height: 100px;
     font-size: 60px;
-    color: aqua;
+    color: rgb(0, 0, 0);
     text-align: center;
     margin: auto;
     margin-top: 70px;

@@ -146,6 +146,7 @@ currentLevel = 'hard';
 
 
 function startRound() {
+  attemptsLeft = 2;
   playerInput = [];
   sequenceDisplay.textContent = '';
   lockNumbers();
@@ -328,3 +329,12 @@ function resetGame() {
   });
   popupContainer.style.display = 'none';
 }
+
+document.addEventListener("keydown", (event) => {
+  const key = event.key.toUpperCase();
+  if ((keyboardKeysNumbers.includes(key) || keyboardKeysLetters.includes(key)) && numberButtons.disabled !== true && letterButtons.disabled !== true) {
+    handleInput(key);
+    highlightKey(key);
+    setTimeout(() => unhighlightKey(key), 200);
+  }
+});
