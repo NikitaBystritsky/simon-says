@@ -21,6 +21,8 @@ const levelButtons = {};
 levels.forEach((level) => {
   const button = document.createElement("button");
   button.textContent = level;
+  button.onclick = () => whichLevel(level);
+  button.onclick = () => selectLevel(level);
   currentLevel = level;
   levelButtons[level] = button;
   levelContainer.appendChild(button);
@@ -98,6 +100,7 @@ keyboardKeysLetters.forEach((key) => {
 const startButton = document.createElement("button");
 startButton.classList.add("start");
 startButton.textContent = "START";
+startButton.onclick = () => startRound();
 mainContainer.appendChild(startButton);
 
 // popup
@@ -122,4 +125,97 @@ popupContainer.appendChild(popupMessage);
 function showPopup(message) {
   popupMessage.firstChild.textContent = message;
   popupContainer.style.display = 'flex';
+}
+
+//start
+lockNumbers();
+lockLetters();
+let sequence = [];
+let playerInput = [];
+let round = 0;
+let canRepeat = true;
+let attemptsLeft = 2;
+let inputEnabled = false;
+currentLevel = 'hard';
+
+
+function startRound() {
+playerInput = [];
+sequenceDisplay.textContent = '';
+lockNumbers();
+lockLetters();
+startButton.classList.add('none');
+  if (round >= 5) {
+    showPopup('Game over! You completed all 5 rounds.');
+    return;
+  }
+  newGameButton.disabled = false;
+  repeatSequence.textContent = "repeat sequence";
+  round++;
+  updateRoundDisplay();
+  const chars =
+    currentLevel === "easy"
+      ? "1234567890"
+      : currentLevel === "medium"
+      ? "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      : "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const newSequence = [];
+  for (let i = 0; i < round * 2; i++) {
+    newSequence.push(chars[Math.floor(Math.random() * chars.length)]);
+    setTimeout(() => {
+      unlockNumbers();
+      unlockLetters();}, 1250 * (round * 2))
+  }
+  sequence = [...newSequence];
+
+  repeatSequence.disabled = false;
+  canRepeat = true;
+  inputEnabled = false;
+  disableLevel(currentLevel);
+}
+
+function disableLevel(level) {
+  currentLevel = level;
+  Object.values(levelButtons).forEach((button) => {
+    if (button.textContent !== currentLevel){
+      button.classList.add('none');
+    }
+  });
+}
+
+function unlockLevel(level) {
+  currentLevel = level;
+  Object.values(levelButtons).forEach((button) => {
+    if (button.textContent !== currentLevel){
+      button.classList.remove('none');
+    }
+  });
+}
+
+function unlockLetters(){
+  Object.values(letterButtons).forEach((button) => {
+    button.disabled = false;
+  });
+}
+
+function lockLetters(){
+  Object.values(letterButtons).forEach((button) => {
+    button.disabled = true;
+  });
+}
+
+function lockNumbers(){
+  Object.values(numberButtons).forEach((button) => {
+    button.disabled = true;
+  });
+}
+
+function unlockNumbers(){
+  Object.values(numberButtons).forEach((button) => {
+    button.disabled = false;
+  });
+}
+
+function updateRoundDisplay() {
+  rounds.textContent = `Round: ${round}/5`;
 }
